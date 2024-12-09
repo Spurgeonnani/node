@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <style>
+       body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: center;
+    background-color: #CCFF00;
+    padding: 1rem;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: grid;
+    grid-auto-flow: column; 
+    gap: 2rem;
+    list-style: none;
+    justify-content: end; 
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block; 
+    }
+
+    .nav-links {
+        display: none; 
+        grid-template-columns: 1fr; 
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        background-color: #CCFF00;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: grid; 
+    }
+
+    .nav-links a {
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+
+.about-section {
+    background-color: #2e2e2e;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 5%;
+    padding: 5%;
+}
+
+.about-left {
+    text-align: left;
+}
+
+.about-heading {
+    font-size: 4vw;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+.name-box, .title-box {
+    border: 2px solid #CCFF00;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.name {
+    font-size: 2rem;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.about-description {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.about-image {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.image-box img {
+    display: block;
+    margin: 0 auto;
+    width: 30vw;
+    height: auto;
+    max-width: 400px;
+    border: 5px solid #CCFF00;
+}
+
+
+.about-right {
+    text-align: center;
+}
+
+.about-right h3 {
+    font-size: 3vw;
+    margin-bottom: 2rem;
+}
+
+.about-right p {
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 1rem;
+    border: 2px solid #CCFF00;
+}
+
+
+.projects-section {
+    background-color: #3e3e3e;
+    padding: 4vw;
+    text-align: left;
+}
+
+.projects-heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+.project-box {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 1rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: #2a2a2a;
+}
+
+.project-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 1rem;
+    border: 2px solid orange;
+}
+
+.project-description {
+    text-align: left;
+}
+
+.project-description h3 {
+    margin-bottom: 0.5rem;
+}
+
+.project-description p {
+    line-height: 1.6;
+}
+
+
+.experience-section {
+    background-color: #4e4e4e;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    padding: 4vw;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.experience-left .project-container,
+.experience-right .project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+
+.education-section {
+    background-color: #5e5e5e;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4vw;
+}
+
+.education-left h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.education-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.education-box {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    border: 2px solid white;
+    padding: 1rem;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.education-img {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+    border: 2px solid orange;
+}
+
+.education-description p {
+    text-align: left;
+}
+
+/* Contact Me Section */
+.contact-right {
+    margin-left: 3rem;
+}
+
+.contact-right h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+button {
+    padding: 0.5rem;
+    border: none;
+    background-color: #CCFF00;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+/* Social Icons */
+.social-icons {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.social-icons img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Up Arrow Button */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #333;
+    color: white;
+    border: none;
+    outline: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#topBtn:hover {
+    background-color: #555;
+}
+
+
+@media (max-width: 768px) {
+    .about-section,
+    .projects-section,
+    .experience-section,
+    .education-section {
+        grid-template-columns: 1fr;
+        padding: 5vw;
+    }
+
+    .project-container,
+    .education-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .image-box img {
+        width: 50vw; 
+    }
+
+    .about-heading, .projects-heading, .section-heading {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .education-box, .project-box {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .contact-right h2 {
+        font-size: 2rem; 
+    }
+
+    .social-icons {
+        grid-template-columns: repeat(2, auto); 
+    }
+
+    .education-img {
+        width: 50px; 
+        height: 50px;
+    }
+
+    input, textarea {
+        width: 100%; 
+    }
+
+    button {
+        width: 100%; 
+    }
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: black; /* Grey color */
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  /*   border-top: 2px solid #ccc;
+    color: #fff; /* White text for contrast */
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #fff; /* White text for copyright */
+}
+footer nav {
+    margin-top: 10px;
+}
+
+
+footer nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #e0e0e0; /* Light grey for links */
+    font-size: 14px;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+    color: #ffffff; /* White on hover */
+}
+ 
+    </style>
+    <header>
+      <nav class="navbar">
+        <div class="hamburger-menu" id="hamburger-menu">☰</div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Edu/Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+   
+
+    <script src="script.js"></script> 
+  </body>
+</html>
+    <!-- About Section (Page 1) -->
+    <section id="about" class="about-section">
+      <div class="about-left">
+        <h2 class="about-heading">About</h2>
+        <div class="name-box">
+          <div class="name">
+            <span>SPURGEON</span>
+            <span>KANNANOOR</span>
+          </div>
+        </div>
+        <div class="title-box">
+          <div class="title">GRAPHIC DESIGNER</div>
+        </div>
+        <div class="about-description">
+          <p>
+            I’m a freelance graphic designer and logo designer in USA. I help
+            small businesses distill their needs from rough ideas, and craft
+            them into thoughtful and authentic brand identities.
+          </p>
+        </div>
+      </div>
+      <div class="about-image">
+        <div class="image-box">
+          <img
+            src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/1img.jpg?raw=true"
+            alt="Profile Image"
+          />
+        </div>
+      </div>
+      <div class="about-right">
+        <h3>Skills</h3>
+        <p>
+          Brand Designer <br />Logo Designer <br />
+          Digital Marketing<br />
+          User experience design<br />Motion graphic design <br />
+          Marketing
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section (Page 2) -->
+    <section id="projects" class="projects-section">
+      <h2 class="projects-heading">Projects</h2>
+      <div class="project-container">
+        <div class="project-box">
+          <img
+            src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/project.png?raw=true"
+            alt="Project 1 Image"
+            class="project-img"
+          />
+          <div class="project-description">
+            <h3>Project - 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="project-box">
+          <img
+            src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/project.png?raw=true"
+            alt="Project 2 Image"
+            class="project-img"
+          />
+          <div class="project-description">
+            <h3>Project - 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="project-box">
+          <img
+            src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/project.png?raw=true"
+            alt="Project 3 Image"
+            class="project-img"
+          />
+          <div class="project-description">
+            <h3>Project - 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="project-box">
+          <img
+            src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/project.png?raw=true"
+            alt="Project 4 Image"
+            class="project-img"
+          />
+          <div class="project-description">
+            <h3>Project - 4</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section (Page 3) -->
+    <section id="experience" class="experience-section">
+      <!-- Left side: Experience heading and two boxes -->
+      <div class="experience-left">
+        <h2 class="section-heading">Experience</h2>
+        <div class="project-container">
+          <div class="project-box">
+            <img
+              src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/work%20experience.png?raw=true"
+              alt="Experience Image 1"
+              class="project-img"
+            />
+            <div class="project-description">
+              <h3>Experience - 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="project-box">
+            <img
+              src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/work%20experience.png?raw=true"
+              alt="Experience Image 2"
+              class="project-img"
+            />
+            <div class="project-description">
+              <h3>Experience - 2</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="experience-right">
+        <h3>Internships</h3>
+        <div class="project-container">
+          <div class="project-box">
+            <img
+              src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/intern.png?raw=true"
+              alt="Internship 1 Image"
+              class="project-img"
+            />
+            <div class="project-description">
+              <h3>Internship - 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="project-box">
+            <img
+              src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/intern.png?raw=true"
+              alt="Internship 2 Image"
+              class="project-img"
+            />
+            <div class="project-description">
+              <h3>Internship - 2</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blogs Section -->
+        <h3>Blogs</h3>
+        <div class="project-box">
+          <img
+            src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/blog.png?raw=true"
+            alt="Blog Image"
+            class="project-img"
+          />
+          <div class="project-description">
+            <h3>Blog</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education and Contact Section (Page 4) -->
+    <section id="education" class="education-section">
+      <div class="education-left">
+        <h2>Education</h2>
+        <div class="education-container">
+          <div class="education-box">
+            <img
+              src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/education.png?raw=true"
+              alt="Education Image 1"
+              class="education-img"
+            />
+            <div class="education-description">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="education-box">
+            <img
+              src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/education.png?raw=true"
+              alt="Education Image 2"
+              class="education-img"
+            />
+            <div class="education-description">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="education-box">
+            <img
+              src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/education.png?raw=true"
+              alt="Education Image 3"
+              class="education-img"
+            />
+            <div class="education-description">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Me Section -->
+      <div class="contact-right">
+        <h2>Contact me</h2>
+        <form id="contact-form">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter Name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Message"
+            required
+          ></textarea>
+          <button type="submit">Submit</button>
+        </form>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+          <a href="https://linkedin.com" target="_blank"
+            ><img
+              src="https://raw.githubusercontent.com/Spurgeonnani/graphic-webdesign/refs/heads/main/images/linkedin.webp"
+              alt="LinkedIn"
+          /></a>
+          <a href="https://github.com" target="_blank"
+            ><img
+              src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/github.png?raw=true"
+              alt="GitHub"
+          /></a>
+          <a href="https://facebook.com" target="_blank"
+            ><img
+              src="https://github.com/Spurgeonnani/graphic-webdesign/blob/main/images/facebook.png?raw=true"
+              alt="Facebook"
+          /></a>
+          <a href="https://instagram.com" target="_blank"
+            ><img
+              src="https://raw.githubusercontent.com/Spurgeonnani/graphic-webdesign/refs/heads/main/images/instagram.webp"
+              alt="Instagram"
+          /></a>
+          <a href="https://x.com" target="_blank"
+            ><img
+              src="https://raw.githubusercontent.com/Spurgeonnani/graphic-webdesign/refs/heads/main/images/x.avif"
+              alt="X"
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Up Arrow Button -->
+    <button onclick="scrollToTop()" id="topBtn" title="Go to top">↑</button>
+
+
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the page from reloading
+          document.getElementById("contact-form").reset(); // Clear the form fields
+        });
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+ <footer>
+  <p>&copy; 2024 Spurg industries - All rights reserved.</p>
+  <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact-form">Contact me</a>
+  </nav>
+</footer>
+  <script>
+    //hamburger menu
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const navLinks = document.getElementById('nav-links');
+
+hamburgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Toggle the 'active' class on the nav-links
+});
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+{
+    "nfts": [
+      {
+        "collectionName": "Bored Ape Yacht Club",
+        "nftName": "Bored Ape",
+        "image": "https://i.seadn.io/gae/sBE79krjeuOIANiBE-DaMUCNHwDeVOJPEv7kCyMluTOrdLyS89YOGAzNSpU6xtrTS0G3qf6954AjW9_1t9vfU8Ks6P0Xqz7W7B7L?auto=format&dpr=1&w=1000",
+        "tokenId": 2121,
+        "price": 8090639.34,
+        "creatorName": "Ramjam",
+        "ownerName": "DrHolo",
+        "lastSalePrice": 77861.70,
+        "dateOfSale": "2022-03-03"
+      },
+      {
+        "collectionName": "Pudgy Penguin",
+        "nftName": "Pudgy Penguin",
+        "image": "https://i.seadn.io/s/raw/files/a6a732f3333dfb966f390a951baba0d0.png?auto=format&dpr=1&w=1000",
+        "tokenId": 5144,
+        "price": 34330860.00,
+        "creatorName": "H7J23A",
+        "ownerName": "1640.eth",
+        "lastSalePrice": 60315.16,
+        "dateOfSale": "2021-08-01"
+      },
+      {
+        "collectionName": "Mutant Ape Yacht Club",
+        "nftName": "Mutant Ape",
+        "image": "https://i.seadn.io/s/raw/files/339a5dc9edf85baad02caf9797f6e27b.png?auto=format&dpr=1&w=1000",
+        "tokenId": 2735,
+        "price": 3818354.54,
+        "creatorName": "HypedMali",
+        "ownerName": "VibesMuseum",
+        "lastSalePrice": 14564.45,
+        "dateOfSale": "2023-07-03"
+      },
+      {
+        "collectionName": "Lil Pudgy",
+        "nftName": "Lil Pudgy",
+        "image": "https://i.seadn.io/gcs/files/023ff2adb25488329eb5191ee8acc9c2.png?auto=format&dpr=1&w=1000",
+        "tokenId": 2640,
+        "price": 33907446.06,
+        "creatorName": "4603C4",
+        "ownerName": "philosophytom",
+        "lastSalePrice": 6584.47,
+        "dateOfSale": "2023-12-30"
+      },
+      {
+        "collectionName": "CryptoPunk",
+        "nftName": "Punk",
+        "image": "https://i.seadn.io/s/raw/files/f3564ef33373939b024fb791f21ec37b.png?auto=format&dpr=1&w=1000",
+        "tokenId": 1,
+        "price": 23000000.00,
+        "creatorName": "C352B5",
+        "ownerName": "B88F61",
+        "lastSalePrice": 43139.27,
+        "dateOfSale": "2020-11-30"
+      },
+      {
+        "collectionName": "Azuki",
+        "nftName": "Azuki",
+        "image": "https://i.seadn.io/s/raw/files/2f71ffc0956b5d890e5cb68441b94a18.png?auto=format&dpr=1&w=1000",
+        "tokenId": 6580,
+        "price": 154841.20,
+        "creatorName": "Nftinitcom_siuuu",
+        "ownerName": "PhoenixRising3",
+        "lastSalePrice": 23197.18,
+        "dateOfSale": "2022-01-27"
+      },
+      {
+        "collectionName": "CLONE X - TMax",
+        "nftName": "CloneX",
+        "image": "https://i.seadn.io/s/raw/files/fc0888da7be8567593946757a0c70967.png?auto=format&dpr=1&w=1000",
+        "tokenId": 7002,
+        "price": 580267.40,
+        "creatorName": "Chris_Metaverse",
+        "ownerName": "whattofarm",
+        "lastSalePrice": 1095.28,
+        "dateOfSale": "2024-08-05"
+      },
+      {
+        "collectionName": "V",
+        "nftName": "V",
+        "image": "https://i.seadn.io/s/raw/files/2afcd1360e33df0a6976b1c80ea440ad.png?auto=format&dpr=1&w=1000",
+        "tokenId": 3907,
+        "price": 58065.45,
+        "creatorName": "V",
+        "ownerName": "E25781",
+        "lastSalePrice": 911.83,
+        "dateOfSale": "2024-12-04"
+      },
+      {
+        "collectionName": "Moonbirds",
+        "nftName": "Moonbird",
+        "image": "https://collection-assets.proof.xyz/moonbirds/images/199.png",
+        "tokenId": 199,
+        "price": 156804.67,
+        "creatorName": "EvoXen",
+        "ownerName": "Skyrise",
+        "lastSalePrice": 10001.00,
+        "dateOfSale": "2022-06-01"
+      },
+      {
+        "collectionName": "Meebits",
+        "nftName": "Meebit",
+        "image": "https://img-cdn.magiceden.dev/rs:fill:400:0:0/plain/https://files.meebits.app/image/9767.png",
+        "tokenId": 3001,
+        "price": 120567.40,
+        "creatorName": "MetaPixel",
+        "ownerName": "MintBrew",
+        "lastSalePrice": 9056.34,
+        "dateOfSale": "2023-09-15"
+      },
+      {
+        "collectionName": "Cool Cats",
+        "nftName": "C C",
+        "image": "https://static.nftvaluations.com/media/tokens/0x1a92f7381b9f03921564a437210bb9396471050c/4457/profile.webp",
+        "tokenId": 445,
+        "price": 180000.00,
+        "creatorName": "BlueKing",
+        "ownerName": "CryptoKing",
+        "lastSalePrice": 14500.00,
+        "dateOfSale": "2022-04-20"
+      },
+      {
+        "collectionName": "World of Women",
+        "nftName": "WoW",
+        "image": "https://static.nftvaluations.com/media/tokens/0xe785e82358879f061bc3dcac6f0444462d4b5330/512/profile.webp",
+        "tokenId": 512,
+        "price": 204567.89,
+        "creatorName": "ElenaArts",
+        "ownerName": "WoWHub",
+        "lastSalePrice": 18500.00,
+        "dateOfSale": "2023-11-30"
+      }
+    ]
+  }
+  
